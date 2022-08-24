@@ -218,6 +218,7 @@ def drawing_hangman(i):
 
 def game(word):
     users_word = ['_'] * len(word)
+    users_word[0], users_word[len(word) - 1] = word[0], word[len(word) - 1]
     attempt = 0
     while ''.join(users_word) != word:
         if attempt > 5:
